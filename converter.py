@@ -48,7 +48,7 @@ class Converter():
         }
     }
 
-    def convert_length_from_oldrussian_to_SI(self, type_val, value, type_source, type_result):
+    def convert_from_oldrussian_to_SI(self, type_val, value, type_source, type_result):
         try:
              temp = round(value * self.oldrussian[type_val][type_source] * self.SI[type_val][type_result], 3)
         except:
@@ -56,7 +56,7 @@ class Converter():
             return
         return temp
 
-    def convert_length_from_american_to_SI(self, type_val, value, type_source, type_result):
+    def convert_from_american_to_SI(self, type_val, value, type_source, type_result):
         try:
             temp =  round(value * self.american[type_val][type_source] * self.SI[type_val][type_result], 3)
         except:
@@ -64,7 +64,7 @@ class Converter():
             return
         return temp
 
-    def convert_length_from_SI_to_oldrussian(self, type_val, value, type_source, type_result):
+    def convert_from_SI_to_oldrussian(self, type_val, value, type_source, type_result):
         try:
             temp =  round(self.SI[type_val][type_source] * value / self.oldrussian[type_val][type_result], 3)
         except:
@@ -72,7 +72,7 @@ class Converter():
             return
         return temp
 
-    def convert_length_from_SI_to_american(self, type_val, value, type_source, type_result):
+    def convert_from_SI_to_american(self, type_val, value, type_source, type_result):
         try:
             temp =  round(self.SI[type_val][type_source] *  value / self.american[type_val][type_result], 3)
         except:
@@ -80,7 +80,7 @@ class Converter():
             return
         return temp
 
-    def convert_length_from_american_to_oldrussian(self, type_val, value, type_source, type_result):
+    def convert_from_american_to_oldrussian(self, type_val, value, type_source, type_result):
         try:
             temp =  round(value * self.american[type_val][type_source] / self.oldrussian[type_val][type_result], 3)
         except:
@@ -88,7 +88,7 @@ class Converter():
             return
         return temp
 
-    def convert_length_from_oldrussian_to_american(self, type_val, value, type_source, type_result):
+    def convert_from_oldrussian_to_american(self, type_val, value, type_source, type_result):
         try:
             temp =  round(value *  self.oldrussian[type_val][type_source] / self.american[type_val][type_result], 3)
         except:
