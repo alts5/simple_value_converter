@@ -66,7 +66,7 @@ class Converter():
 
     def convert_length_from_SI_to_oldrussian(self, type_val, value, type_source, type_result):
         try:
-            temp =  round(self.oldrussian[type_val][type_result] / (self.SI[type_val][type_source] * value), 3)
+            temp =  round(self.SI[type_val][type_source] * value / self.oldrussian[type_val][type_result], 3)
         except:
             print("Ошибка преобразования. Проверьте исходные величины")
             return
@@ -74,7 +74,7 @@ class Converter():
 
     def convert_length_from_SI_to_american(self, type_val, value, type_source, type_result):
         try:
-            temp =  round(self.american[type_val][type_result] / (self.SI[type_val][type_source] *  value), 3)
+            temp =  round(self.SI[type_val][type_source] *  value / self.american[type_val][type_result], 3)
         except:
             print("Ошибка преобразования. Проверьте исходные величины")
             return
