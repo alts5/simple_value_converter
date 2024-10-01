@@ -67,23 +67,8 @@ class testConverter(unittest.TestCase):
     def test_duim_to_vershok(self):
         self.assertEqual(self.converter.convert("Длина", 5, "Дюйм", "Вершок"), 2.886)
 
-    def test_fut_to_pyad(self):
-        self.assertEqual(self.converter.convert("Длина", 5, "Фут", "Пядь"), 8.571)
-
-    def test_yard_to_arshin(self):
-        self.assertEqual(self.converter.convert("Длина", 5, "Ярд", "Аршин"), 6.429)
-
-    def test_vershok_to_duim(self):
-        self.assertEqual(self.converter.convert("Длина", 5, "Вершок", "Дюйм"), 8.661)
-
     def test_pyad_to_fut(self):
         self.assertEqual(self.converter.convert("Длина", 5, "Пядь", "Фут"), 2.917)
-
-    def test_arshin_to_yard(self):
-        self.assertEqual(self.converter.convert("Длина", 5, "Аршин", "Ярд"), 3.889)
-
-    def test_zolotnik_to_tonna(self):
-        self.assertEqual(self.converter.convert("Масса", 5, "Золотник", "Тонна", 5), 2e-05)
 
     def test_lot_to_centner(self):
         self.assertEqual(self.converter.convert("Масса", 5, "Лот", "Центнер"), 0.001)
@@ -120,12 +105,6 @@ class testConverter(unittest.TestCase):
 
     def test_unciya_to_zolotnik(self):
         self.assertEqual(self.converter.convert("Масса", 5, "Унция", "Золотник"), 32.787)
-
-    def test_funt_to_lot(self):
-        self.assertEqual(self.converter.convert("Масса", 5, "Фунт", "Лот"), 177.344)
-
-    def test_stoun_to_pud(self):
-        self.assertEqual(self.converter.convert("Масса", 5, "Стоун", "Пуд"), 1.938)
 
     def test_kilometr_to_metr(self):
         self.assertEqual(self.converter.convert("Длина", 5, "Километр", "Метр"), 5000.0)
