@@ -48,51 +48,45 @@ class Converter():
         }
     }
 
-    def convert_from_oldrussian_to_SI(self, type_val, value, type_source, type_result):
+    def convert_from_oldrussian_to_SI(self, type_val : str, value : float, type_source : str, type_result : str):
         try:
              temp = round(value * self.oldrussian[type_val][type_source] * self.SI[type_val][type_result], 3)
         except:
-            print("Ошибка преобразования. Проверьте исходные величины")
             return
         return temp
 
-    def convert_from_american_to_SI(self, type_val, value, type_source, type_result):
+    def convert_from_american_to_SI(self, type_val : str, value : float, type_source : str, type_result : str):
         try:
             temp =  round(value * self.american[type_val][type_source] * self.SI[type_val][type_result], 3)
         except:
-            print("Ошибка преобразования. Проверьте исходные величины")
             return
         return temp
 
-    def convert_from_SI_to_oldrussian(self, type_val, value, type_source, type_result):
+    def convert_from_SI_to_oldrussian(self, type_val : str, value : float, type_source : str, type_result : str):
         try:
             temp =  round(self.SI[type_val][type_source] * value / self.oldrussian[type_val][type_result], 3)
         except:
-            print("Ошибка преобразования. Проверьте исходные величины")
             return
         return temp
 
-    def convert_from_SI_to_american(self, type_val, value, type_source, type_result):
+    def convert_from_SI_to_american(self, type_val : str, value : float, type_source : str, type_result : str):
         try:
             temp =  round(self.SI[type_val][type_source] *  value / self.american[type_val][type_result], 3)
         except:
-            print("Ошибка преобразования. Проверьте исходные величины")
             return
         return temp
 
-    def convert_from_american_to_oldrussian(self, type_val, value, type_source, type_result):
+    def convert_from_american_to_oldrussian(self, type_val : str, value : float, type_source : str, type_result : str):
         try:
             temp =  round(value * self.american[type_val][type_source] / self.oldrussian[type_val][type_result], 3)
         except:
-            print("Ошибка преобразования. Проверьте исходные величины")
             return
         return temp
 
-    def convert_from_oldrussian_to_american(self, type_val, value, type_source, type_result):
+    def convert_from_oldrussian_to_american(self, type_val : str, value : float, type_source : str, type_result : str):
         try:
             temp =  round(value *  self.oldrussian[type_val][type_source] / self.american[type_val][type_result], 3)
         except:
-            print("Ошибка преобразования. Проверьте исходные величины")
             return
         return temp
 
